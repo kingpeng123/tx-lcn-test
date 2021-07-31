@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="lcn-tm" />
+        <module name="common" />
+        <module name="lcn-c" />
+        <module name="lcn-b" />
+        <module name="lcn-a" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common" target="1.8" />
+      <module name="lcn" target="1.8" />
+      <module name="lcn-a" target="1.8" />
+      <module name="lcn-b" target="1.8" />
+      <module name="lcn-c" target="1.8" />
+      <module name="lcn-tm" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common" options="-parameters" />
+      <module name="lcn-a" options="-parameters" />
+      <module name="lcn-b" options="-parameters" />
+      <module name="lcn-c" options="-parameters" />
+      <module name="lcn-tm" options="-parameters" />
+    </option>
+  </component>
+</project>

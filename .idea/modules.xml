@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/lcn.iml" filepath="$PROJECT_DIR$/.idea/lcn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lcn-a/lcn-a.iml" filepath="$PROJECT_DIR$/lcn-a/lcn-a.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lcn-b/lcn-b.iml" filepath="$PROJECT_DIR$/lcn-b/lcn-b.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lcn-c/lcn-c.iml" filepath="$PROJECT_DIR$/lcn-c/lcn-c.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lcn-tm/lcn-tm.iml" filepath="$PROJECT_DIR$/lcn-tm/lcn-tm.iml" />
+    </modules>
+  </component>
+</project>

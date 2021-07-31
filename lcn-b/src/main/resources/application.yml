@@ -1,0 +1,58 @@
+server:
+  port: 5002
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/order_test?serverTimezone=GMT
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+  application:
+    name: order
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        #命名空间ID
+        #namespace: 3a3e5fc2-fc1c-4e24-be50-279d6e67e03e  #dev命名空间
+        #        namespace: 4d583ac5-94f5-4c4e-9557-313c3f4025e6  #test命名空间
+        namespace: efb12c42-53a3-41db-bbb4-ed72508ba2b0  #prod命名空间
+        #如果设置了群组，必须设置对应的群组名，如果没有设置，默认为DEFAULT_GROUP不设置
+        group: lightweight
+
+mybatis-plus:
+  mapper-locations: classpath*:/mappers/*.xml
+
+
+#　Tx-Client 配置
+tx-lcn:
+  # 是否启动LCN负载均衡策略(优化选项，开启与否，功能不受影响)
+  ribbon:
+    loadbalancer:
+      dtx:
+        enabled: true
+  # 默认之配置为TM的本机默认端口
+  client:
+    manager-address: 127.0.0.1:8066
+  # 开启日志,默认为false
+  logger:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbc-url: jdbc:mysql://localhost:3306/tx-manager?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+    username: root
+    password: root
+
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: THREAD
+#          thread:
+#            # 熔断器超时时间，默认：1000/毫秒
+#            timeoutInMilliseconds: 5000
